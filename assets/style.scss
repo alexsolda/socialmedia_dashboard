@@ -1,0 +1,346 @@
+@import "variables";
+@import "mixings";
+
+/*RESET DEFAULTS*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+/*MAIN CONTENT*/
+
+body {
+    background-color: $VeryDarkBlue;
+    transition: 0.3s ease-in-out;
+
+    .bg--top {
+        height: 245px;
+        position: absolute;
+        top: 0px;
+        z-index: -1;
+        width: 100%;
+        background-color: $VeryVeryDarkBlue;
+        border-radius: 20px;
+        transition: 0.3s ease-in-out;
+    }
+}
+
+/*FIRST CONTAINER*/
+
+.container {
+    width: 90%;
+    max-width: 1440px;
+    height: 100vh;
+    margin: 0 auto;
+
+
+    .title {
+        height: 130px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include resposive(mobile) {
+            flex-direction: column;
+            height: auto;
+        }
+
+        .title--content {
+            flex: 1;
+
+            @include resposive(mobile) {
+                padding: 20px 0px;
+                width: 100%;
+            }
+
+            h1 {
+                color: $White;
+            }
+            h2 {
+                color: $DesaturatedBlue;
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+
+        .toggle--bg {
+            display: flex;
+            justify-content: center;
+
+            
+            @include resposive(mobile) {
+                justify-content: space-between;
+                width: 100%;
+                padding: 20px 0px 40px 0px;
+                border-top: 1px solid $DesaturatedBlue;
+            }
+
+            .bg-on-off {
+                font-weight: 700;
+                margin-right: 10px;
+                flex: 1;
+            }
+
+            .dark-shadow {
+                color: $White;
+                text-shadow: white 4px 2px 15px;
+            }
+            .light-shadow {
+                color: $VeryVeryDarkBlue;
+                text-shadow: rgb(0, 0, 0) 4px 2px 15px;
+            }
+
+            .toggle--bt {
+                .liga-desliga__checkbox {
+                    position: absolute;
+                    left: -9999px;
+
+                    &:checked + .liga-desliga__botao::before {
+                        background: $ToggleLight;
+                    }
+                    &:checked + .liga-desliga__botao::after {
+                        left: 28px;
+                        background-color: $DarkGrayishBlue;
+                    }
+                }
+
+                .liga-desliga__botao {
+                    position: relative;
+                    cursor: pointer;
+                }
+
+                .liga-desliga__botao {
+                    &::before,
+                    &::after {
+                        content: "";
+                        transition: all 0.5s ease;
+                    }
+
+                    &::before {
+                        display: inline-block;
+                        width: 50px;
+                        height: 25px;
+                        background: $ToggleDark;
+                        border-radius: 16px;
+                    }
+
+                    &::after {
+                        position: absolute;
+                        top: -6px;
+                        left: 2px;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        background-color: $VeryVeryDarkBlue;
+                    }
+                }
+            }
+        }
+    }
+
+    /*FIRST CONTAINER CONTENT*/
+
+    .cards--container {
+        height: 215px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        margin-bottom: 30px;
+
+        @include resposive(tablet) {
+            grid-template-columns: repeat(2, 1fr);
+            height: auto;
+        }
+
+        @include resposive(mobile) {
+            grid-template-columns: 1fr;
+            height: auto;
+        }
+
+        .card--big {
+            background-color: $DarkDesaturatedBlue;
+            border-radius: 5px;
+
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+
+            &:hover {
+                filter: contrast(125%);
+            }
+
+            .user {
+                display: flex;
+                justify-content: center;
+                padding: 25px 0px;
+
+                img {
+                    margin-right: 10px;
+                }
+
+                h3 {
+                    color: $DesaturatedBlue;
+                    font-size: 14px;
+                }
+            }
+
+            .followers {
+                text-align: center;
+
+                h3 {
+                    font-size: 50px;
+                    color: $White;
+                }
+                h4 {
+                    color: $DesaturatedBlue;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                    font-weight: 400;
+                    font-size: 14px;
+                }
+            }
+
+            .update-activity {
+                display: flex;
+                justify-content: center;
+                padding: 20px 0px;
+
+                img {
+                    align-self: center;
+                    margin-right: 5px;
+                    height: 0.3rem;
+                }
+                h4 {
+                    font-size: 14px;
+                    color: $LimeGreen;
+                }
+                .activity__down {
+                    color: $BrightRed;
+                }
+            }
+        }
+
+        .facebook {
+            border-top: 4px solid $Facebook;
+        }
+        .twitter {
+            border-top: 4px solid $Twitter;
+        }
+        .instagram {
+            border-top: 4px solid $Instagram;
+        }
+        .youtube {
+            border-top: 4px solid $YouTube;
+        }
+    }
+
+    /*SECONDARY CONTENT*/
+
+    .title--secondary {
+        height: 70px;
+
+        display: flex;
+        justify-content: flex-start;
+
+        h3 {
+            align-self: center;
+            color: $White;
+            font-weight: 700;
+            font-size: 25px;
+        }
+    }
+
+    .cards--secondary {
+        height: 280px;
+
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 30px;
+        row-gap: 20px;
+
+        @include resposive(tablet) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            height: auto;
+        }
+
+        @include resposive(mobile) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            height: auto;
+        }
+
+        .card--little {
+            background-color: $DarkDesaturatedBlue;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+
+            &:hover {
+                filter: contrast(125%);
+            }
+
+            .page {
+                display: flex;
+                justify-content: space-between;
+                padding: 25px 20px;
+                color: $DesaturatedBlue;
+            }
+            .status {
+                display: flex;
+                justify-content: space-between;
+                padding: 0px 20px;
+                align-items: center;
+
+                p {
+                    font-size: 35px;
+                    font-weight: 700;
+                    color: $White;
+                }
+
+                .status__icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+
+                    span {
+                        font-size: 14px;
+                        font-weight: 700;
+                        margin-left: 5px;
+                    }
+                    .status__down {
+                        color: $BrightRed;
+                    }
+                    .status__up {
+                        color: $LimeGreen;
+                    }
+
+                    img {
+                        align-self: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .attribution {
+        height: 200px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: $DesaturatedBlue;
+        text-align: center;
+
+        a {
+            color: $White;
+        }
+    }
+}

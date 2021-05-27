@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style.css">
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+</head>
+
+<body>
+  <div class="bg--top"></div>
+  <main class="container">
+    <header class="title">
+      <div class="title--content">
+        <h1>Social Media Dashboard</h1>
+        <h2>Total Followers: 23,004</h2>
+      </div>
+      <div class="toggle--bg">
+        <div class="bg-on-off dark-shadow">
+          Light Mode
+        </div>
+        <div class="toggle--bt">
+          <input type="checkbox" class="liga-desliga__checkbox" id="liga-desliga">
+          <label for="liga-desliga" class="liga-desliga__botao"></label>
+        </div>
+      </div>
+    </header>
+    <section class="cards--container">
+      <div class="card--big facebook">
+        <div class="user">
+          <img src="./images/icon-facebook.svg" alt="">
+          <h3>@nathanf</h3>
+        </div>
+        <div class="followers">
+          <h3>1987</h3>
+          <h4>Followers</h4>
+        </div>
+        <div class="update-activity">
+          <img src="./images/icon-up.svg" alt="">
+          <h4>12 Today</h4>
+        </div>
+      </div>
+      <div class="card--big twitter">
+        <div class="user">
+          <img src="./images/icon-twitter.svg" alt="">
+          <h3>@nathanf</h3>
+        </div>
+        <div class="followers">
+          <h3>1044</h3>
+          <h4>Followers</h4>
+        </div>
+        <div class="update-activity">
+          <img src="./images/icon-up.svg" alt="">
+          <h4>12 Today</h4>
+        </div>
+      </div>
+      <div class="card--big youtube">
+        <div class="user">
+          <img src="./images/icon-instagram.svg" alt="">
+          <h3>@realnathanf</h3>
+        </div>
+        <div class="followers">
+          <h3>11k</h3>
+          <h4>Followers</h4>
+        </div>
+        <div class="update-activity">
+          <img src="./images/icon-up.svg" alt="">
+          <h4>12 Today</h4>
+        </div>
+      </div>
+      <div class="card--big youtube">
+        <div class="user">
+          <img src="./images/icon-youtube.svg" alt="">
+          <h3>Nathan F.</h3>
+        </div>
+        <div class="followers">
+          <h3>8239</h3>
+          <h4>Followers</h4>
+        </div>
+        <div class="update-activity">
+          <img src="./images/icon-down.svg" alt="">
+          <h4 class="activity__down">12 Today</h4>
+        </div>
+      </div>
+    </section>
+    <div class="title--secondary">
+      <h3>Overview - Today</h3>
+    </div>
+    <section class="cards--secondary">
+      <div class="card--little">
+        <div class="page">
+          <h4>Page Views</h4>
+          <img src="./images/icon-facebook.svg" alt="">
+        </div>
+        <div class="status">
+          <p>87</p>
+          <div class="status__icon">
+            <img src="./images/icon-up.svg" alt=""> <span class="status__up">3%</span>
+          </div>
+        </div>
+      </div>
+      <div class="card--little">
+        <div class="page">
+          <h4>Likes</h4>
+          <img src="./images/icon-facebook.svg" alt="">
+        </div>
+        <div class="status">
+          <p>52</p>
+          <div class="status__icon">
+            <img src="./images/icon-down.svg" alt="">
+            <span class="status__down">2%</span>
+          </div>
+        </div>
+      </div>
+      <div class="card--little">
+        <div class="page">
+          <h4>Likes</h4>
+          <img src="./images/icon-instagram.svg" alt="">
+        </div>
+        <div class="status">
+          <p>5462</p>
+          <div class="status__icon">
+            <img src="./images/icon-up.svg" alt=""> <span class="status__up">2257%</span>
+          </div>
+        </div>
+      </div>
+      <div class="card--little">
+        <div class="page">
+          <h4>Profile Views</h4>
+          <img src="./images/icon-instagram.svg" alt="">
+        </div>
+        <div class="status">
+          <p>52k</p>
+          <div class="status__icon">
+            <img src="./images/icon-up.svg" alt=""> <span class="status__up">1375%</span>
+          </div>
+        </div>
+      </div>
+      <div class="card--little">
+        <div class="page">
+          <h4>Retweets</h4>
+          <img src="./images/icon-twitter.svg" alt="">
+        </div>
+        <div class="status">
+          <p>117</p>
+          <div class="status__icon">
+            <img src="./images/icon-up.svg" alt=""> <span class="status__up">303%</span>
+          </div>
+        </div>
+      </div>
+      <div class="card--little">
+        <div class="page">
+          <h4>Likes</h4>
+          <img src="./images/icon-twitter.svg" alt="">
+        </div>
+        <div class="status">
+          <p>507</p>
+          <div class="status__icon">
+            <img src="./images/icon-up.svg" alt=""> <span class="status__up">553%</span>
+          </div>
+        </div>
+      </div>
+      <div class="card--little">
+        <div class="page">
+          <h4>Likes</h4>
+          <img src="./images/icon-youtube.svg" alt="">
+        </div>
+        <div class="status">
+          <p>107</p>
+          <div class="status__icon">
+            <img src="./images/icon-down.svg" alt=""> <span class="status__down">19%</span>
+          </div>
+        </div>
+      </div>
+      <div class="card--little">
+        <div class="page">
+          <h4>Total Views</h4>
+          <img src="./images/icon-youtube.svg" alt="">
+        </div>
+        <div class="status">
+          <p>1407</p>
+          <div class="status__icon">
+            <img src="./images/icon-down.svg" alt=""> <span class="status__down">12%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="attribution">
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by
+        <a href="#">AlexSolda</a>.
+      </p>
+    </footer>
+  </main>
+
+
+<script type="text/javascript" src="./assets/script/app.js"></script>
+</body>
+
+</html>

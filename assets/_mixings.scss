@@ -1,0 +1,7 @@
+@mixin resposive($size) {
+    @if $size == 'tablet' {
+        @media only screen and (max-width: 960px) {@content};
+    }@else if $size == 'mobile' {
+        @media only screen and (max-width: 540px) {@content};
+    }
+}
